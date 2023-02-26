@@ -93,6 +93,8 @@ Discarded input sections
                 0x0000000000000000        0x8 CMakeFiles/v3fkontroller.dir/main.c.obj
  .rodata.FAULT_PIN
                 0x0000000000000000        0x4 CMakeFiles/v3fkontroller.dir/main.c.obj
+ .rodata.I2C_CONTROLLER
+                0x0000000000000000        0x4 CMakeFiles/v3fkontroller.dir/main.c.obj
  .rodata.LED_A_PIN
                 0x0000000000000000        0x4 CMakeFiles/v3fkontroller.dir/main.c.obj
  .rodata.LED_B_PIN
@@ -114,6 +116,10 @@ Discarded input sections
  .rodata.MOTOR_SENSE_V
                 0x0000000000000000        0x4 CMakeFiles/v3fkontroller.dir/main.c.obj
  .rodata.MOTOR_SENSE_W
+                0x0000000000000000        0x4 CMakeFiles/v3fkontroller.dir/main.c.obj
+ .rodata.MPC6050_I2C_SCL_PIN
+                0x0000000000000000        0x4 CMakeFiles/v3fkontroller.dir/main.c.obj
+ .rodata.MPC6050_I2C_SDA_PIN
                 0x0000000000000000        0x4 CMakeFiles/v3fkontroller.dir/main.c.obj
  .rodata.rotor_loops_per_full_rotation
                 0x0000000000000000        0x8 CMakeFiles/v3fkontroller.dir/main.c.obj
@@ -463,8 +469,6 @@ Discarded input sections
                 0x0000000000000000       0x2c CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
  .text.clock_configure
                 0x0000000000000000      0x148 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
- .text.clock_get_hz
-                0x0000000000000000        0xc CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
  .text.clock_set_reported_hz
                 0x0000000000000000        0xc CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
  .text.frequency_count_khz
@@ -1143,9 +1147,32 @@ Discarded input sections
  .text          0x0000000000000000        0x0 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/hardware_adc/adc.c.obj
  .data          0x0000000000000000        0x0 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/hardware_adc/adc.c.obj
  .bss           0x0000000000000000        0x0 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/hardware_adc/adc.c.obj
- .text          0x0000000000000000        0x0 /tmp/cciqJVQt.o
- .data          0x0000000000000000        0x0 /tmp/cciqJVQt.o
- .bss           0x0000000000000000        0x0 /tmp/cciqJVQt.o
+ .text          0x0000000000000000        0x0 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj
+ .data          0x0000000000000000        0x0 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj
+ .bss           0x0000000000000000        0x0 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj
+ .text.i2c_read_blocking_internal
+                0x0000000000000000      0x100 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj
+ .text.i2c_write_blocking_internal.isra.1
+                0x0000000000000000      0x19c CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj
+ .text.i2c_deinit
+                0x0000000000000000       0x20 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj
+ .text.i2c_set_baudrate
+                0x0000000000000000       0xc0 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj
+ .text.i2c_set_slave_mode
+                0x0000000000000000       0x3c CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj
+ .text.i2c_write_blocking_until
+                0x0000000000000000       0x48 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj
+ .text.i2c_write_timeout_per_char_us
+                0x0000000000000000       0x48 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj
+ .text.i2c_read_blocking_until
+                0x0000000000000000       0x44 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj
+ .text.i2c_read_timeout_per_char_us
+                0x0000000000000000       0x44 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj
+ .data.i2c1_inst
+                0x0000000000000000        0x8 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj
+ .text          0x0000000000000000        0x0 /tmp/ccBb5Tib.o
+ .data          0x0000000000000000        0x0 /tmp/ccBb5Tib.o
+ .bss           0x0000000000000000        0x0 /tmp/ccBb5Tib.o
  .data          0x0000000000000000        0x0 /usr/lib/gcc/arm-none-eabi/8.3.1/thumb/v6-m/nofp/libgcc.a(_dvmd_tls.o)
  .bss           0x0000000000000000        0x0 /usr/lib/gcc/arm-none-eabi/8.3.1/thumb/v6-m/nofp/libgcc.a(_dvmd_tls.o)
  .text          0x0000000000000000       0x10 /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(lib_a-atexit.o)
@@ -1409,11 +1436,11 @@ LOAD /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp
 .boot2          0x0000000010000000      0x100
                 0x0000000010000000                __boot2_start__ = .
  *(.boot2)
- .boot2         0x0000000010000000      0x100 /tmp/cciqJVQt.o
+ .boot2         0x0000000010000000      0x100 /tmp/ccBb5Tib.o
                 0x0000000010000100                __boot2_end__ = .
                 0x0000000000000001                ASSERT (((__boot2_end__ - __boot2_start__) == 0x100), ERROR: Pico second stage bootloader must be 256 bytes in size)
 
-.text           0x0000000010000100     0x7b48
+.text           0x0000000010000100     0x7f70
                 0x0000000010000100                __logical_binary_start = .
  *(.vectors)
  .vectors       0x0000000010000100       0xd4 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_standard_link/crt0.S.obj
@@ -1488,594 +1515,606 @@ LOAD /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp
                 0x0000000010000694       0xbc CMakeFiles/v3fkontroller.dir/main.c.obj
                 0x0000000010000694                pwm_control_loop
  .text.startup.main
-                0x0000000010000750      0x268 CMakeFiles/v3fkontroller.dir/main.c.obj
+                0x0000000010000750      0x40c CMakeFiles/v3fkontroller.dir/main.c.obj
                 0x0000000010000750                main
  .text.gpio_set_function
-                0x00000000100009b8       0x30 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
-                0x00000000100009b8                gpio_set_function
+                0x0000000010000b5c       0x30 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
+                0x0000000010000b5c                gpio_set_function
  .text.gpio_set_pulls
-                0x00000000100009e8       0x30 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
-                0x00000000100009e8                gpio_set_pulls
+                0x0000000010000b8c       0x30 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
+                0x0000000010000b8c                gpio_set_pulls
  .text.gpio_set_input_enabled
-                0x0000000010000a18       0x28 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
-                0x0000000010000a18                gpio_set_input_enabled
+                0x0000000010000bbc       0x28 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
+                0x0000000010000bbc                gpio_set_input_enabled
  .text.gpio_init
-                0x0000000010000a40       0x3c CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
-                0x0000000010000a40                gpio_init
+                0x0000000010000be4       0x3c CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
+                0x0000000010000be4                gpio_init
  .text.hw_claim_or_assert
-                0x0000000010000a7c       0x44 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
-                0x0000000010000a7c                hw_claim_or_assert
+                0x0000000010000c20       0x44 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
+                0x0000000010000c20                hw_claim_or_assert
  .text.hw_claim_unused_from_range
-                0x0000000010000ac0       0x9c CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
-                0x0000000010000ac0                hw_claim_unused_from_range
+                0x0000000010000c64       0x9c CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
+                0x0000000010000c64                hw_claim_unused_from_range
  .text.running_on_fpga
-                0x0000000010000b5c       0x10 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_platform/platform.c.obj
-                0x0000000010000b5c                running_on_fpga
+                0x0000000010000d00       0x10 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_platform/platform.c.obj
+                0x0000000010000d00                running_on_fpga
  .text.spin_locks_reset
-                0x0000000010000b6c       0x1c CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
-                0x0000000010000b6c                spin_locks_reset
+                0x0000000010000d10       0x1c CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
+                0x0000000010000d10                spin_locks_reset
  .text.next_striped_spin_lock_num
-                0x0000000010000b88       0x18 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
-                0x0000000010000b88                next_striped_spin_lock_num
+                0x0000000010000d2c       0x18 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
+                0x0000000010000d2c                next_striped_spin_lock_num
  .text.spin_lock_claim_unused
-                0x0000000010000ba0       0x20 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
-                0x0000000010000ba0                spin_lock_claim_unused
+                0x0000000010000d44       0x20 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
+                0x0000000010000d44                spin_lock_claim_unused
  .text.irq_set_enabled
-                0x0000000010000bc0       0x24 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
-                0x0000000010000bc0                irq_set_enabled
+                0x0000000010000d64       0x24 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x0000000010000d64                irq_set_enabled
  .text.irq_set_pending
-                0x0000000010000be4       0x10 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
-                0x0000000010000be4                irq_set_pending
+                0x0000000010000d88       0x10 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x0000000010000d88                irq_set_pending
  .text.irq_has_shared_handler
-                0x0000000010000bf4       0x2c CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
-                0x0000000010000bf4                irq_has_shared_handler
+                0x0000000010000d98       0x2c CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x0000000010000d98                irq_has_shared_handler
  .text.irq_get_vtable_handler
-                0x0000000010000c20       0x10 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
-                0x0000000010000c20                irq_get_vtable_handler
+                0x0000000010000dc4       0x10 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x0000000010000dc4                irq_get_vtable_handler
  .text.irq_set_exclusive_handler
-                0x0000000010000c30       0x54 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
-                0x0000000010000c30                irq_set_exclusive_handler
+                0x0000000010000dd4       0x54 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x0000000010000dd4                irq_set_exclusive_handler
  .text.irq_add_shared_handler
-                0x0000000010000c84      0x1c8 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
-                0x0000000010000c84                irq_add_shared_handler
+                0x0000000010000e28      0x1c8 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x0000000010000e28                irq_add_shared_handler
  .text.irq_remove_handler
-                0x0000000010000e4c      0x1b4 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
-                0x0000000010000e4c                irq_remove_handler
+                0x0000000010000ff0      0x1b4 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x0000000010000ff0                irq_remove_handler
  .text.irq_add_tail_to_free_list
-                0x0000000010001000       0xb4 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
-                0x0000000010001000                irq_add_tail_to_free_list
+                0x00000000100011a4       0xb4 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x00000000100011a4                irq_add_tail_to_free_list
  .text.irq_init_priorities
-                0x00000000100010b4       0x24 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
-                0x00000000100010b4                irq_init_priorities
+                0x0000000010001258       0x24 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x0000000010001258                irq_init_priorities
  .text.user_irq_claim_unused
-                0x00000000100010d8       0x30 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
-                0x00000000100010d8                user_irq_claim_unused
+                0x000000001000127c       0x30 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x000000001000127c                user_irq_claim_unused
  .text.lock_init
-                0x0000000010001108       0x10 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/common/pico_sync/lock_core.c.obj
-                0x0000000010001108                lock_init
+                0x00000000100012ac       0x10 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/common/pico_sync/lock_core.c.obj
+                0x00000000100012ac                lock_init
  .text.timer_pool_entry_comparator
-                0x0000000010001118       0x34 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/common/pico_time/time.c.obj
-                0x0000000010001118                timer_pool_entry_comparator
+                0x00000000100012bc       0x34 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/common/pico_time/time.c.obj
+                0x00000000100012bc                timer_pool_entry_comparator
  .text.sleep_until_callback
-                0x000000001000114c       0x30 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/common/pico_time/time.c.obj
+                0x00000000100012f0       0x30 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/common/pico_time/time.c.obj
  .text.add_alarm_under_lock
-                0x000000001000117c      0x114 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/common/pico_time/time.c.obj
+                0x0000000010001320      0x114 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/common/pico_time/time.c.obj
  .text.alarm_pool_alarm_callback
-                0x0000000010001290      0x1d0 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/common/pico_time/time.c.obj
+                0x0000000010001434      0x1d0 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/common/pico_time/time.c.obj
  .text.alarm_pool_init_default
-                0x0000000010001460       0x64 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/common/pico_time/time.c.obj
-                0x0000000010001460                alarm_pool_init_default
+                0x0000000010001604       0x64 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/common/pico_time/time.c.obj
+                0x0000000010001604                alarm_pool_init_default
  .text.alarm_pool_get_default
-                0x00000000100014c4        0x8 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/common/pico_time/time.c.obj
-                0x00000000100014c4                alarm_pool_get_default
+                0x0000000010001668        0x8 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/common/pico_time/time.c.obj
+                0x0000000010001668                alarm_pool_get_default
  .text.alarm_pool_add_alarm_at
-                0x00000000100014cc      0x19c CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/common/pico_time/time.c.obj
-                0x00000000100014cc                alarm_pool_add_alarm_at
+                0x0000000010001670      0x19c CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/common/pico_time/time.c.obj
+                0x0000000010001670                alarm_pool_add_alarm_at
  .text.alarm_pool_cancel_alarm
-                0x0000000010001668       0x70 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/common/pico_time/time.c.obj
-                0x0000000010001668                alarm_pool_cancel_alarm
+                0x000000001000180c       0x70 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/common/pico_time/time.c.obj
+                0x000000001000180c                alarm_pool_cancel_alarm
  .text.sleep_us
-                0x00000000100016d8       0xe8 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/common/pico_time/time.c.obj
-                0x00000000100016d8                sleep_us
+                0x000000001000187c       0xe8 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/common/pico_time/time.c.obj
+                0x000000001000187c                sleep_us
  .text.best_effort_wfe_or_timeout
-                0x00000000100017c0       0x58 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/common/pico_time/time.c.obj
-                0x00000000100017c0                best_effort_wfe_or_timeout
+                0x0000000010001964       0x58 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/common/pico_time/time.c.obj
+                0x0000000010001964                best_effort_wfe_or_timeout
  .text.hardware_alarm_irq_handler
-                0x0000000010001818       0xb0 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+                0x00000000100019bc       0xb0 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
  .text.hardware_alarm_claim
-                0x00000000100018c8       0x18 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
-                0x00000000100018c8                hardware_alarm_claim
+                0x0000000010001a6c       0x18 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+                0x0000000010001a6c                hardware_alarm_claim
  .text.time_us_64
-                0x00000000100018e0       0x18 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
-                0x00000000100018e0                time_us_64
+                0x0000000010001a84       0x18 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+                0x0000000010001a84                time_us_64
  .text.busy_wait_until
-                0x00000000100018f8       0x20 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
-                0x00000000100018f8                busy_wait_until
+                0x0000000010001a9c       0x20 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+                0x0000000010001a9c                busy_wait_until
  .text.hardware_alarm_set_callback
-                0x0000000010001918       0x8c CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
-                0x0000000010001918                hardware_alarm_set_callback
+                0x0000000010001abc       0x8c CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+                0x0000000010001abc                hardware_alarm_set_callback
  .text.hardware_alarm_set_target
-                0x00000000100019a4       0xe8 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
-                0x00000000100019a4                hardware_alarm_set_target
+                0x0000000010001b48       0xe8 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+                0x0000000010001b48                hardware_alarm_set_target
  .text.hardware_alarm_cancel
-                0x0000000010001a8c       0x40 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
-                0x0000000010001a8c                hardware_alarm_cancel
+                0x0000000010001c30       0x40 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+                0x0000000010001c30                hardware_alarm_cancel
  .text.ph_merge_nodes
-                0x0000000010001acc       0x5c CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/common/pico_util/pheap.c.obj
+                0x0000000010001c70       0x5c CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/common/pico_util/pheap.c.obj
  .text.ph_post_alloc_init
-                0x0000000010001b28      0x1b8 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/common/pico_util/pheap.c.obj
-                0x0000000010001b28                ph_post_alloc_init
+                0x0000000010001ccc      0x1b8 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/common/pico_util/pheap.c.obj
+                0x0000000010001ccc                ph_post_alloc_init
  .text.ph_merge_two_pass
-                0x0000000010001ce0       0x4c CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/common/pico_util/pheap.c.obj
-                0x0000000010001ce0                ph_merge_two_pass
+                0x0000000010001e84       0x4c CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/common/pico_util/pheap.c.obj
+                0x0000000010001e84                ph_merge_two_pass
  .text.ph_remove_any_head
-                0x0000000010001d2c      0x1b8 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/common/pico_util/pheap.c.obj
+                0x0000000010001ed0      0x1b8 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/common/pico_util/pheap.c.obj
  .text.ph_remove_head
-                0x0000000010001ee4      0x1bc CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/common/pico_util/pheap.c.obj
-                0x0000000010001ee4                ph_remove_head
+                0x0000000010002088      0x1bc CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/common/pico_util/pheap.c.obj
+                0x0000000010002088                ph_remove_head
  .text.ph_remove_and_free_node
-                0x00000000100020a0       0x7c CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/common/pico_util/pheap.c.obj
-                0x00000000100020a0                ph_remove_and_free_node
+                0x0000000010002244       0x7c CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/common/pico_util/pheap.c.obj
+                0x0000000010002244                ph_remove_and_free_node
  .text.mutex_init
-                0x000000001000211c       0x1c CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/common/pico_sync/mutex.c.obj
-                0x000000001000211c                mutex_init
+                0x00000000100022c0       0x1c CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/common/pico_sync/mutex.c.obj
+                0x00000000100022c0                mutex_init
  .text.recursive_mutex_init
-                0x0000000010002138       0x1c CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/common/pico_sync/mutex.c.obj
-                0x0000000010002138                recursive_mutex_init
+                0x00000000100022dc       0x1c CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/common/pico_sync/mutex.c.obj
+                0x00000000100022dc                recursive_mutex_init
  .text.critical_section_init
-                0x0000000010002154       0x20 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/common/pico_sync/critical_section.c.obj
-                0x0000000010002154                critical_section_init
+                0x00000000100022f8       0x20 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/common/pico_sync/critical_section.c.obj
+                0x00000000100022f8                critical_section_init
  .text.runtime_init
-                0x0000000010002174       0xf4 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
-                0x0000000010002174                runtime_init
- .text.exit     0x0000000010002268        0x4 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
-                0x0000000010002268                exit
- .text.panic    0x000000001000226c       0x30 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
-                0x000000001000226c                panic
+                0x0000000010002318       0xf4 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+                0x0000000010002318                runtime_init
+ .text.exit     0x000000001000240c        0x4 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+                0x000000001000240c                exit
+ .text.panic    0x0000000010002410       0x30 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+                0x0000000010002410                panic
  .text.hard_assertion_failure
-                0x000000001000229c        0xc CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
-                0x000000001000229c                hard_assertion_failure
+                0x0000000010002440        0xc CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+                0x0000000010002440                hard_assertion_failure
  .text.clocks_init
-                0x00000000100022a8      0x2c0 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
-                0x00000000100022a8                clocks_init
+                0x000000001000244c      0x2c0 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
+                0x000000001000244c                clocks_init
+ .text.clock_get_hz
+                0x000000001000270c        0xc CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
+                0x000000001000270c                clock_get_hz
  .text.pll_init
-                0x0000000010002568       0xa8 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
-                0x0000000010002568                pll_init
+                0x0000000010002718       0xa8 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
+                0x0000000010002718                pll_init
  .text.watchdog_start_tick
-                0x0000000010002610       0x10 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj
-                0x0000000010002610                watchdog_start_tick
+                0x00000000100027c0       0x10 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj
+                0x00000000100027c0                watchdog_start_tick
  .text.watchdog_reboot
-                0x0000000010002620       0x98 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj
-                0x0000000010002620                watchdog_reboot
+                0x00000000100027d0       0x98 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj
+                0x00000000100027d0                watchdog_reboot
  .text.xosc_init
-                0x00000000100026b8       0x28 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj
-                0x00000000100026b8                xosc_init
+                0x0000000010002868       0x28 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj
+                0x0000000010002868                xosc_init
  .text._out_null
-                0x00000000100026e0        0x4 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+                0x0000000010002890        0x4 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
  .text._out_rev
-                0x00000000100026e4       0x9c CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+                0x0000000010002894       0x9c CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
  .text._ntoa_format
-                0x0000000010002780      0x1c8 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+                0x0000000010002930      0x1c8 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
  .text._out_char
-                0x0000000010002948       0x10 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+                0x0000000010002af8       0x10 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
  .text._out_fct
-                0x0000000010002958       0x10 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
- .text._etoa    0x0000000010002968      0x45c CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
- .text._ftoa    0x0000000010002dc4      0x4c0 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+                0x0000000010002b08       0x10 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+ .text._etoa    0x0000000010002b18      0x45c CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+ .text._ftoa    0x0000000010002f74      0x4c0 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
  .text._vsnprintf
-                0x0000000010003284      0xad0 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+                0x0000000010003434      0xad0 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
  .text.vfctprintf
-                0x0000000010003d54       0x20 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
-                0x0000000010003d54                vfctprintf
+                0x0000000010003f04       0x20 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+                0x0000000010003f04                vfctprintf
  .text.weak_raw_vprintf
-                0x0000000010003d74       0x30 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
-                0x0000000010003d74                weak_raw_vprintf
- .text          0x0000000010003da4       0x10 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
+                0x0000000010003f24       0x30 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+                0x0000000010003f24                weak_raw_vprintf
+ .text          0x0000000010003f54       0x10 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
  .text.rom_func_lookup
-                0x0000000010003db4       0x10 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
-                0x0000000010003db4                rom_func_lookup
+                0x0000000010003f64       0x10 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
+                0x0000000010003f64                rom_func_lookup
  .text.rom_data_lookup
-                0x0000000010003dc4       0x10 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
-                0x0000000010003dc4                rom_data_lookup
+                0x0000000010003f74       0x10 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
+                0x0000000010003f74                rom_data_lookup
  .text.rom_funcs_lookup
-                0x0000000010003dd4       0x3c CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
-                0x0000000010003dd4                rom_funcs_lookup
+                0x0000000010003f84       0x3c CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
+                0x0000000010003f84                rom_funcs_lookup
  .text.__wrap___aeabi_idiv
-                0x0000000010003e10       0x50 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_divider/divider.S.obj
-                0x0000000010003e10                __wrap___aeabi_idivmod
-                0x0000000010003e10                divmod_s32s32
-                0x0000000010003e10                div_s32s32
-                0x0000000010003e10                __wrap___aeabi_idiv
-                0x0000000010003e18                divmod_s32s32_unsafe
-                0x0000000010003e44                divmod_s32s32_savestate
+                0x0000000010003fc0       0x50 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_divider/divider.S.obj
+                0x0000000010003fc0                __wrap___aeabi_idivmod
+                0x0000000010003fc0                divmod_s32s32
+                0x0000000010003fc0                div_s32s32
+                0x0000000010003fc0                __wrap___aeabi_idiv
+                0x0000000010003fc8                divmod_s32s32_unsafe
+                0x0000000010003ff4                divmod_s32s32_savestate
  .text.__wrap___aeabi_uidiv
-                0x0000000010003e60       0x4c CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_divider/divider.S.obj
-                0x0000000010003e60                __wrap___aeabi_uidiv
-                0x0000000010003e60                __wrap___aeabi_uidivmod
-                0x0000000010003e60                div_u32u32
-                0x0000000010003e60                divmod_u32u32
-                0x0000000010003e68                divmod_u32u32_unsafe
-                0x0000000010003e90                divmod_u32u32_savestate
+                0x0000000010004010       0x4c CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_divider/divider.S.obj
+                0x0000000010004010                __wrap___aeabi_uidiv
+                0x0000000010004010                __wrap___aeabi_uidivmod
+                0x0000000010004010                div_u32u32
+                0x0000000010004010                divmod_u32u32
+                0x0000000010004018                divmod_u32u32_unsafe
+                0x0000000010004040                divmod_u32u32_savestate
  .text.__wrap___aeabi_ldiv
-                0x0000000010003eac      0x434 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_divider/divider.S.obj
-                0x0000000010003eac                div_s64s64
-                0x0000000010003eac                divmod_s64s64
-                0x0000000010003eac                __wrap___aeabi_ldivmod
-                0x0000000010003ee4                div_u64u64
-                0x0000000010003ee4                divmod_u64u64
-                0x0000000010003ee4                __wrap___aeabi_uldivmod
-                0x0000000010003ef4                divmod_u64u64_savestate
-                0x0000000010003f1c                divmod_s64s64_unsafe
-                0x0000000010003fa4                divmod_u64u64_unsafe
+                0x000000001000405c      0x434 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_divider/divider.S.obj
+                0x000000001000405c                div_s64s64
+                0x000000001000405c                divmod_s64s64
+                0x000000001000405c                __wrap___aeabi_ldivmod
+                0x0000000010004094                div_u64u64
+                0x0000000010004094                divmod_u64u64
+                0x0000000010004094                __wrap___aeabi_uldivmod
+                0x00000000100040a4                divmod_u64u64_savestate
+                0x00000000100040cc                divmod_s64s64_unsafe
+                0x0000000010004154                divmod_u64u64_unsafe
  .text.__wrap___aeabi_darithmetic
-                0x00000000100042e0       0x80 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
-                0x00000000100042e0                __wrap___aeabi_drsub
-                0x00000000100042e6                __wrap___aeabi_dsub
-                0x00000000100042f8                __wrap___aeabi_dadd
-                0x000000001000430a                __wrap___aeabi_ddiv
-                0x0000000010004346                __wrap___aeabi_dmul
+                0x0000000010004490       0x80 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
+                0x0000000010004490                __wrap___aeabi_drsub
+                0x0000000010004496                __wrap___aeabi_dsub
+                0x00000000100044a8                __wrap___aeabi_dadd
+                0x00000000100044ba                __wrap___aeabi_ddiv
+                0x00000000100044f6                __wrap___aeabi_dmul
  .text.__wrap___aeabi_cdcmple
-                0x0000000010004360       0x6c CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
-                0x0000000010004360                __wrap___aeabi_cdrcmple
-                0x0000000010004370                __wrap___aeabi_cdcmple
-                0x0000000010004370                __wrap___aeabi_cdcmpeq
+                0x0000000010004510       0x6c CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
+                0x0000000010004510                __wrap___aeabi_cdrcmple
+                0x0000000010004520                __wrap___aeabi_cdcmple
+                0x0000000010004520                __wrap___aeabi_cdcmpeq
  .text.__wrap___aeabi_dcmplt
-                0x00000000100043cc        0xc CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
-                0x00000000100043cc                __wrap___aeabi_dcmplt
+                0x000000001000457c        0xc CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
+                0x000000001000457c                __wrap___aeabi_dcmplt
  .text.__wrap___aeabi_dcmpge
-                0x00000000100043d8       0x10 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
-                0x00000000100043d8                __wrap___aeabi_dcmpge
+                0x0000000010004588       0x10 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
+                0x0000000010004588                __wrap___aeabi_dcmpge
  .text.__wrap___aeabi_dcmpgt
-                0x00000000100043e8        0xa CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
-                0x00000000100043e8                __wrap___aeabi_dcmpgt
+                0x0000000010004598        0xa CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
+                0x0000000010004598                __wrap___aeabi_dcmpgt
  .text.__wrap___aeabi_dcmpun
-                0x00000000100043f2       0x1c CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
-                0x00000000100043f2                __wrap___aeabi_dcmpun
- *fill*         0x000000001000440e        0x2 
+                0x00000000100045a2       0x1c CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
+                0x00000000100045a2                __wrap___aeabi_dcmpun
+ *fill*         0x00000000100045be        0x2 
  .text.__wrap___aeabi_i2d
-                0x0000000010004410       0x38 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
-                0x0000000010004410                __wrap___aeabi_ui2d
-                0x0000000010004418                __wrap___aeabi_i2d
+                0x00000000100045c0       0x38 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
+                0x00000000100045c0                __wrap___aeabi_ui2d
+                0x00000000100045c8                __wrap___aeabi_i2d
  .text.__wrap___aeabi_d2iz
-                0x0000000010004448       0x48 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
-                0x0000000010004448                __wrap___aeabi_d2iz
-                0x0000000010004448                double2int_z
+                0x00000000100045f8       0x48 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
+                0x00000000100045f8                __wrap___aeabi_d2iz
+                0x00000000100045f8                double2int_z
  .text.__wrap___aeabi_d2uiz
-                0x0000000010004490       0x18 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
-                0x0000000010004490                double2uint
-                0x0000000010004490                __wrap___aeabi_d2uiz
+                0x0000000010004640       0x18 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
+                0x0000000010004640                double2uint
+                0x0000000010004640                __wrap___aeabi_d2uiz
  .text.__wrap___aeabi_ul2d
-                0x00000000100044a8       0x18 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
-                0x00000000100044a8                __wrap___aeabi_ul2d
+                0x0000000010004658       0x18 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
+                0x0000000010004658                __wrap___aeabi_ul2d
  .text.__wrap___aeabi_d2ulz
-                0x00000000100044c0       0x18 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
-                0x00000000100044c0                __wrap___aeabi_d2ulz
+                0x0000000010004670       0x18 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
+                0x0000000010004670                __wrap___aeabi_d2ulz
  .text.__aeabi_double_init
-                0x00000000100044d8       0xbc CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
-                0x00000000100044d8                __aeabi_double_init
+                0x0000000010004688       0xbc CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
+                0x0000000010004688                __aeabi_double_init
  .text.double_table_shim_on_use_helper
-                0x0000000010004594       0x2c CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
-                0x0000000010004594                double_table_shim_on_use_helper
+                0x0000000010004744       0x2c CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
+                0x0000000010004744                double_table_shim_on_use_helper
  .text.__wrap___aeabi_dsub
-                0x00000000100045c0       0x10 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
-                0x00000000100045c0                drsub_shim
-                0x00000000100045c6                dsub_shim
+                0x0000000010004770       0x10 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
+                0x0000000010004770                drsub_shim
+                0x0000000010004776                dsub_shim
  .text.dadd_shim
-                0x00000000100045d0      0x15c CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
-                0x00000000100045d0                dadd_shim
+                0x0000000010004780      0x15c CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
+                0x0000000010004780                dadd_shim
  .text.dmul_shim
-                0x000000001000472c      0x15c CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
-                0x000000001000472c                dmul_shim
+                0x00000000100048dc      0x15c CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
+                0x00000000100048dc                dmul_shim
  .text.ddiv_shim
-                0x0000000010004888      0x1b0 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
-                0x0000000010004888                ddiv_shim
+                0x0000000010004a38      0x1b0 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
+                0x0000000010004a38                ddiv_shim
  .text.double2uint_shim
-                0x0000000010004a38        0xe CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
-                0x0000000010004a38                double2uint_shim
-                0x0000000010004a3a                double2ufix_shim
- *fill*         0x0000000010004a46        0x2 
+                0x0000000010004be8        0xe CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
+                0x0000000010004be8                double2uint_shim
+                0x0000000010004bea                double2ufix_shim
+ *fill*         0x0000000010004bf6        0x2 
  .text.double2uint64_shim
-                0x0000000010004a48       0x70 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
-                0x0000000010004a48                double2uint64_shim
-                0x0000000010004a4a                double2ufix64_shim
-                0x0000000010004a6a                d2fix_a
+                0x0000000010004bf8       0x70 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
+                0x0000000010004bf8                double2uint64_shim
+                0x0000000010004bfa                double2ufix64_shim
+                0x0000000010004c1a                d2fix_a
  .text.x2double_shims
-                0x0000000010004ab8       0x90 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
-                0x0000000010004ab8                uint2double_shim
-                0x0000000010004aba                ufix2double_shim
-                0x0000000010004ac0                int2double_shim
-                0x0000000010004ac2                fix2double_shim
-                0x0000000010004ac8                uint642double_shim
-                0x0000000010004aca                ufix642double_shim
-                0x0000000010004ad0                int642double_shim
-                0x0000000010004ad2                fix642double_shim
+                0x0000000010004c68       0x90 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
+                0x0000000010004c68                uint2double_shim
+                0x0000000010004c6a                ufix2double_shim
+                0x0000000010004c70                int2double_shim
+                0x0000000010004c72                fix2double_shim
+                0x0000000010004c78                uint642double_shim
+                0x0000000010004c7a                ufix642double_shim
+                0x0000000010004c80                int642double_shim
+                0x0000000010004c82                fix642double_shim
  .text.dunpacks
-                0x0000000010004b48       0x3c CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
-                0x0000000010004b48                dunpacks
+                0x0000000010004cf8       0x3c CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
+                0x0000000010004cf8                dunpacks
  .text.__aeabi_lmul
-                0x0000000010004b84       0x32 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj
-                0x0000000010004b84                __wrap___aeabi_lmul
- *fill*         0x0000000010004bb6        0x2 
+                0x0000000010004d34       0x32 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj
+                0x0000000010004d34                __wrap___aeabi_lmul
+ *fill*         0x0000000010004d66        0x2 
  .text.__aeabi_float_init
-                0x0000000010004bb8       0x68 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj
-                0x0000000010004bb8                __aeabi_float_init
+                0x0000000010004d68       0x68 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj
+                0x0000000010004d68                __aeabi_float_init
  .text.float_table_shim_on_use_helper
-                0x0000000010004c20       0x2c CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.S.obj
-                0x0000000010004c20                float_table_shim_on_use_helper
- .text          0x0000000010004c4c       0x10 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
-                0x0000000010004c4c                __aeabi_mem_init
- .text.memset   0x0000000010004c5c        0xc CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
-                0x0000000010004c5c                __wrap_memset
- .text.memcpy   0x0000000010004c68        0xc CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
-                0x0000000010004c68                __wrap___aeabi_memcpy
-                0x0000000010004c68                __wrap_memcpy
+                0x0000000010004dd0       0x2c CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.S.obj
+                0x0000000010004dd0                float_table_shim_on_use_helper
+ .text          0x0000000010004dfc       0x10 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
+                0x0000000010004dfc                __aeabi_mem_init
+ .text.memset   0x0000000010004e0c        0xc CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
+                0x0000000010004e0c                __wrap_memset
+ .text.memcpy   0x0000000010004e18        0xc CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
+                0x0000000010004e18                __wrap___aeabi_memcpy
+                0x0000000010004e18                __wrap_memcpy
  .text.stdio_out_chars_no_crlf
-                0x0000000010004c74       0x10 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+                0x0000000010004e24       0x10 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
  .text.stdio_out_chars_crlf
-                0x0000000010004c84       0xac CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+                0x0000000010004e34       0xac CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
  .text.stdio_stack_buffer_flush.part.1
-                0x0000000010004d30       0xe8 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+                0x0000000010004ee0       0xe8 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
  .text.stdio_buffered_printer
-                0x0000000010004e18       0x20 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+                0x0000000010004fc8       0x20 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
  .text.stdio_put_string
-                0x0000000010004e38       0xf8 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+                0x0000000010004fe8       0xf8 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
  .text.__wrap_putchar
-                0x0000000010004f30       0xa4 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
-                0x0000000010004f30                __wrap_putchar
+                0x00000000100050e0       0xa4 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+                0x00000000100050e0                __wrap_putchar
  .text.__wrap_puts
-                0x0000000010004fd4       0x3c CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
-                0x0000000010004fd4                __wrap_puts
+                0x0000000010005184       0x3c CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+                0x0000000010005184                __wrap_puts
  .text.stdio_set_driver_enabled
-                0x0000000010005010       0x30 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
-                0x0000000010005010                stdio_set_driver_enabled
+                0x00000000100051c0       0x30 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+                0x00000000100051c0                stdio_set_driver_enabled
  .text.__wrap_vprintf
-                0x0000000010005040       0x98 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
-                0x0000000010005040                __wrap_vprintf
+                0x00000000100051f0       0x98 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+                0x00000000100051f0                __wrap_vprintf
  .text.__wrap_printf
-                0x00000000100050d8       0x18 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
-                0x00000000100050d8                __wrap_printf
+                0x0000000010005288       0x18 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+                0x0000000010005288                __wrap_printf
  .text.stdio_init_all
-                0x00000000100050f0        0x8 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
-                0x00000000100050f0                stdio_init_all
+                0x00000000100052a0        0x8 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+                0x00000000100052a0                stdio_init_all
  .text.resetd_init
-                0x00000000100050f8        0x4 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
+                0x00000000100052a8        0x4 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
  .text.resetd_reset
-                0x00000000100050fc        0xc CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
+                0x00000000100052ac        0xc CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
  .text.resetd_open
-                0x0000000010005108       0x28 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
+                0x00000000100052b8       0x28 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
  .text.resetd_xfer_cb
-                0x0000000010005130        0x4 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
+                0x00000000100052e0        0x4 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
  .text.resetd_control_xfer_cb
-                0x0000000010005134       0x64 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
+                0x00000000100052e4       0x64 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
  .text.usbd_app_driver_get_cb
-                0x0000000010005198        0xc CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
-                0x0000000010005198                usbd_app_driver_get_cb
+                0x0000000010005348        0xc CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
+                0x0000000010005348                usbd_app_driver_get_cb
  .text.tud_cdc_line_coding_cb
-                0x00000000100051a4       0x34 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
-                0x00000000100051a4                tud_cdc_line_coding_cb
+                0x0000000010005354       0x34 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
+                0x0000000010005354                tud_cdc_line_coding_cb
  .text.stdio_usb_in_chars
-                0x00000000100051d8       0x68 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
-                0x00000000100051d8                stdio_usb_in_chars
+                0x0000000010005388       0x68 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
+                0x0000000010005388                stdio_usb_in_chars
  .text.stdio_usb_out_chars
-                0x0000000010005240       0xf0 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
+                0x00000000100053f0       0xf0 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
  .text.timer_task
-                0x0000000010005330       0x18 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
- .text.usb_irq  0x0000000010005348       0x10 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
+                0x00000000100054e0       0x18 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
+ .text.usb_irq  0x00000000100054f8       0x10 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
  .text.low_priority_worker_irq
-                0x0000000010005358       0x24 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
+                0x0000000010005508       0x24 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
  .text.stdio_usb_init
-                0x000000001000537c       0xac CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
-                0x000000001000537c                stdio_usb_init
+                0x000000001000552c       0xac CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
+                0x000000001000552c                stdio_usb_init
  .text.tud_descriptor_device_cb
-                0x0000000010005428        0x8 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
-                0x0000000010005428                tud_descriptor_device_cb
+                0x00000000100055d8        0x8 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
+                0x00000000100055d8                tud_descriptor_device_cb
  .text.tud_descriptor_configuration_cb
-                0x0000000010005430        0x8 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
-                0x0000000010005430                tud_descriptor_configuration_cb
+                0x00000000100055e0        0x8 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
+                0x00000000100055e0                tud_descriptor_configuration_cb
  .text.tud_descriptor_string_cb
-                0x0000000010005438       0x70 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
-                0x0000000010005438                tud_descriptor_string_cb
+                0x00000000100055e8       0x70 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
+                0x00000000100055e8                tud_descriptor_string_cb
  .text.dcd_rp2040_irq
-                0x00000000100054a8      0x21c CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
+                0x0000000010005658      0x21c CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
  .text.dcd_int_enable
-                0x00000000100056c4        0xc CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
-                0x00000000100056c4                dcd_int_enable
+                0x0000000010005874        0xc CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
+                0x0000000010005874                dcd_int_enable
  .text.dcd_set_address
-                0x00000000100056d0       0x14 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
-                0x00000000100056d0                dcd_set_address
+                0x0000000010005880       0x14 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
+                0x0000000010005880                dcd_set_address
  .text.dcd_connect
-                0x00000000100056e4       0x10 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
-                0x00000000100056e4                dcd_connect
+                0x0000000010005894       0x10 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
+                0x0000000010005894                dcd_connect
  .text.dcd_init
-                0x00000000100056f4      0x144 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
-                0x00000000100056f4                dcd_init
+                0x00000000100058a4      0x144 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
+                0x00000000100058a4                dcd_init
  .text.dcd_edpt0_status_complete
-                0x0000000010005838       0x1c CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
-                0x0000000010005838                dcd_edpt0_status_complete
+                0x00000000100059e8       0x1c CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
+                0x00000000100059e8                dcd_edpt0_status_complete
  .text.dcd_edpt_open
-                0x0000000010005854       0xe4 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
-                0x0000000010005854                dcd_edpt_open
+                0x0000000010005a04       0xe4 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
+                0x0000000010005a04                dcd_edpt_open
  .text.dcd_edpt_close_all
-                0x0000000010005938       0xbc CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
-                0x0000000010005938                dcd_edpt_close_all
+                0x0000000010005ae8       0xbc CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
+                0x0000000010005ae8                dcd_edpt_close_all
  .text.dcd_edpt_xfer
-                0x00000000100059f4       0x24 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
-                0x00000000100059f4                dcd_edpt_xfer
+                0x0000000010005ba4       0x24 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
+                0x0000000010005ba4                dcd_edpt_xfer
  .text.dcd_edpt_stall
-                0x0000000010005a18       0x34 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
-                0x0000000010005a18                dcd_edpt_stall
+                0x0000000010005bc8       0x34 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
+                0x0000000010005bc8                dcd_edpt_stall
  .text.dcd_edpt_clear_stall
-                0x0000000010005a4c       0x2c CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
-                0x0000000010005a4c                dcd_edpt_clear_stall
+                0x0000000010005bfc       0x2c CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
+                0x0000000010005bfc                dcd_edpt_clear_stall
  .text._hw_endpoint_buffer_control_update32.part.2
-                0x0000000010005a78       0x20 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj
+                0x0000000010005c28       0x20 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj
  .text.rp2040_usb_init
-                0x0000000010005a98       0x4c CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj
-                0x0000000010005a98                rp2040_usb_init
+                0x0000000010005c48       0x4c CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj
+                0x0000000010005c48                rp2040_usb_init
  .text.hw_endpoint_reset_transfer
-                0x0000000010005ae4        0xc CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj
-                0x0000000010005ae4                hw_endpoint_reset_transfer
+                0x0000000010005c94        0xc CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj
+                0x0000000010005c94                hw_endpoint_reset_transfer
  .text._hw_endpoint_buffer_control_update32
-                0x0000000010005af0       0x40 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj
-                0x0000000010005af0                _hw_endpoint_buffer_control_update32
+                0x0000000010005ca0       0x40 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj
+                0x0000000010005ca0                _hw_endpoint_buffer_control_update32
  .text.hw_endpoint_xfer_start
-                0x0000000010005b30      0x138 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj
-                0x0000000010005b30                hw_endpoint_xfer_start
+                0x0000000010005ce0      0x138 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj
+                0x0000000010005ce0                hw_endpoint_xfer_start
  .text.hw_endpoint_xfer_continue
-                0x0000000010005c68      0x1e0 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj
-                0x0000000010005c68                hw_endpoint_xfer_continue
+                0x0000000010005e18      0x1e0 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj
+                0x0000000010005e18                hw_endpoint_xfer_continue
  .text.tud_mounted
-                0x0000000010005e48       0x10 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
-                0x0000000010005e48                tud_mounted
+                0x0000000010005ff8       0x10 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+                0x0000000010005ff8                tud_mounted
  .text.tud_suspended
-                0x0000000010005e58       0x10 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
-                0x0000000010005e58                tud_suspended
+                0x0000000010006008       0x10 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+                0x0000000010006008                tud_suspended
  .text.tud_inited
-                0x0000000010005e68        0xc CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
-                0x0000000010005e68                tud_inited
+                0x0000000010006018        0xc CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+                0x0000000010006018                tud_inited
  .text.tud_init
-                0x0000000010005e74       0xd4 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
-                0x0000000010005e74                tud_init
+                0x0000000010006024       0xd4 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+                0x0000000010006024                tud_init
  .text.tud_task
-                0x0000000010005f48      0x928 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
-                0x0000000010005f48                tud_task
+                0x00000000100060f8      0x928 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+                0x00000000100060f8                tud_task
  .text.dcd_event_bus_signal
-                0x0000000010006870      0x124 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
-                0x0000000010006870                dcd_event_bus_signal
+                0x0000000010006a20      0x124 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+                0x0000000010006a20                dcd_event_bus_signal
  .text.dcd_event_bus_reset
-                0x0000000010006994       0x58 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
-                0x0000000010006994                dcd_event_bus_reset
+                0x0000000010006b44       0x58 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+                0x0000000010006b44                dcd_event_bus_reset
  .text.dcd_event_setup_received
-                0x00000000100069ec       0x50 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
-                0x00000000100069ec                dcd_event_setup_received
+                0x0000000010006b9c       0x50 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+                0x0000000010006b9c                dcd_event_setup_received
  .text.dcd_event_xfer_complete
-                0x0000000010006a3c       0x68 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
-                0x0000000010006a3c                dcd_event_xfer_complete
+                0x0000000010006bec       0x68 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+                0x0000000010006bec                dcd_event_xfer_complete
  .text.usbd_open_edpt_pair
-                0x0000000010006aa4       0x9c CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
-                0x0000000010006aa4                usbd_open_edpt_pair
+                0x0000000010006c54       0x9c CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+                0x0000000010006c54                usbd_open_edpt_pair
  .text.usbd_edpt_open
-                0x0000000010006b40       0x30 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
-                0x0000000010006b40                usbd_edpt_open
+                0x0000000010006cf0       0x30 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+                0x0000000010006cf0                usbd_edpt_open
  .text.usbd_edpt_claim
-                0x0000000010006b70       0x60 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
-                0x0000000010006b70                usbd_edpt_claim
+                0x0000000010006d20       0x60 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+                0x0000000010006d20                usbd_edpt_claim
  .text.usbd_edpt_release
-                0x0000000010006bd0       0x4c CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
-                0x0000000010006bd0                usbd_edpt_release
+                0x0000000010006d80       0x4c CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+                0x0000000010006d80                usbd_edpt_release
  .text.usbd_edpt_xfer
-                0x0000000010006c1c       0x48 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
-                0x0000000010006c1c                usbd_edpt_xfer
+                0x0000000010006dcc       0x48 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+                0x0000000010006dcc                usbd_edpt_xfer
  .text.tud_control_status
-                0x0000000010006c64       0x30 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj
-                0x0000000010006c64                tud_control_status
+                0x0000000010006e14       0x30 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj
+                0x0000000010006e14                tud_control_status
  .text.tud_control_xfer
-                0x0000000010006c94       0xb4 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj
-                0x0000000010006c94                tud_control_xfer
+                0x0000000010006e44       0xb4 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj
+                0x0000000010006e44                tud_control_xfer
  .text.usbd_control_reset
-                0x0000000010006d48       0x14 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj
-                0x0000000010006d48                usbd_control_reset
+                0x0000000010006ef8       0x14 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj
+                0x0000000010006ef8                usbd_control_reset
  .text.usbd_control_set_complete_callback
-                0x0000000010006d5c        0xc CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj
-                0x0000000010006d5c                usbd_control_set_complete_callback
+                0x0000000010006f0c        0xc CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj
+                0x0000000010006f0c                usbd_control_set_complete_callback
  .text.usbd_control_set_request
-                0x0000000010006d68       0x1c CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj
-                0x0000000010006d68                usbd_control_set_request
+                0x0000000010006f18       0x1c CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj
+                0x0000000010006f18                usbd_control_set_request
  .text.usbd_control_xfer_cb
-                0x0000000010006d84       0xfc CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj
-                0x0000000010006d84                usbd_control_xfer_cb
+                0x0000000010006f34       0xfc CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj
+                0x0000000010006f34                usbd_control_xfer_cb
  .text.tud_cdc_n_connected
-                0x0000000010006e80       0x30 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
-                0x0000000010006e80                tud_cdc_n_connected
+                0x0000000010007030       0x30 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
+                0x0000000010007030                tud_cdc_n_connected
  .text.tud_cdc_n_available
-                0x0000000010006eb0       0x18 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
-                0x0000000010006eb0                tud_cdc_n_available
+                0x0000000010007060       0x18 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
+                0x0000000010007060                tud_cdc_n_available
  .text.tud_cdc_n_read
-                0x0000000010006ec8       0x70 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
-                0x0000000010006ec8                tud_cdc_n_read
+                0x0000000010007078       0x70 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
+                0x0000000010007078                tud_cdc_n_read
  .text.tud_cdc_n_write_flush
-                0x0000000010006f38       0x78 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
-                0x0000000010006f38                tud_cdc_n_write_flush
+                0x00000000100070e8       0x78 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
+                0x00000000100070e8                tud_cdc_n_write_flush
  .text.tud_cdc_n_write
-                0x0000000010006fb0       0x34 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
-                0x0000000010006fb0                tud_cdc_n_write
+                0x0000000010007160       0x34 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
+                0x0000000010007160                tud_cdc_n_write
  .text.tud_cdc_n_write_available
-                0x0000000010006fe4       0x18 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
-                0x0000000010006fe4                tud_cdc_n_write_available
+                0x0000000010007194       0x18 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
+                0x0000000010007194                tud_cdc_n_write_available
  .text.cdcd_init
-                0x0000000010006ffc       0x7c CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
-                0x0000000010006ffc                cdcd_init
+                0x00000000100071ac       0x7c CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
+                0x00000000100071ac                cdcd_init
  .text.cdcd_reset
-                0x0000000010007078       0x2c CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
-                0x0000000010007078                cdcd_reset
+                0x0000000010007228       0x2c CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
+                0x0000000010007228                cdcd_reset
  .text.cdcd_open
-                0x00000000100070a4       0xe4 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
-                0x00000000100070a4                cdcd_open
+                0x0000000010007254       0xe4 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
+                0x0000000010007254                cdcd_open
  .text.cdcd_control_xfer_cb
-                0x0000000010007188       0xdc CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
-                0x0000000010007188                cdcd_control_xfer_cb
+                0x0000000010007338       0xdc CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
+                0x0000000010007338                cdcd_control_xfer_cb
  .text.cdcd_xfer_cb
-                0x0000000010007264      0x19c CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
-                0x0000000010007264                cdcd_xfer_cb
+                0x0000000010007414      0x19c CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
+                0x0000000010007414                cdcd_xfer_cb
  .text.tusb_init
-                0x0000000010007400        0xc CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/lib/tinyusb/src/tusb.c.obj
-                0x0000000010007400                tusb_init
+                0x00000000100075b0        0xc CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/lib/tinyusb/src/tusb.c.obj
+                0x00000000100075b0                tusb_init
  .text.tusb_inited
-                0x000000001000740c        0x8 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/lib/tinyusb/src/tusb.c.obj
-                0x000000001000740c                tusb_inited
+                0x00000000100075bc        0x8 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/lib/tinyusb/src/tusb.c.obj
+                0x00000000100075bc                tusb_inited
  .text.tu_edpt_validate
-                0x0000000010007414       0x74 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/lib/tinyusb/src/tusb.c.obj
-                0x0000000010007414                tu_edpt_validate
+                0x00000000100075c4       0x74 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/lib/tinyusb/src/tusb.c.obj
+                0x00000000100075c4                tu_edpt_validate
  .text.tu_edpt_bind_driver
-                0x0000000010007488       0x2c CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/lib/tinyusb/src/tusb.c.obj
-                0x0000000010007488                tu_edpt_bind_driver
+                0x0000000010007638       0x2c CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/lib/tinyusb/src/tusb.c.obj
+                0x0000000010007638                tu_edpt_bind_driver
  .text.tu_fifo_config
-                0x00000000100074b4       0x78 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
-                0x00000000100074b4                tu_fifo_config
+                0x0000000010007664       0x78 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
+                0x0000000010007664                tu_fifo_config
  .text.tu_fifo_count
-                0x000000001000752c       0x24 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
-                0x000000001000752c                tu_fifo_count
+                0x00000000100076dc       0x24 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
+                0x00000000100076dc                tu_fifo_count
  .text.tu_fifo_empty
-                0x0000000010007550       0x10 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
-                0x0000000010007550                tu_fifo_empty
+                0x0000000010007700       0x10 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
+                0x0000000010007700                tu_fifo_empty
  .text.tu_fifo_remaining
-                0x0000000010007560       0x20 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
-                0x0000000010007560                tu_fifo_remaining
+                0x0000000010007710       0x20 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
+                0x0000000010007710                tu_fifo_remaining
  .text.tu_fifo_read
-                0x0000000010007580       0xa0 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
-                0x0000000010007580                tu_fifo_read
+                0x0000000010007730       0xa0 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
+                0x0000000010007730                tu_fifo_read
  .text.tu_fifo_read_n
-                0x0000000010007620       0xf8 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
-                0x0000000010007620                tu_fifo_read_n
+                0x00000000100077d0       0xf8 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
+                0x00000000100077d0                tu_fifo_read_n
  .text.tu_fifo_write
-                0x0000000010007718       0x80 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
-                0x0000000010007718                tu_fifo_write
+                0x00000000100078c8       0x80 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
+                0x00000000100078c8                tu_fifo_write
  .text.tu_fifo_write_n
-                0x0000000010007798       0xfc CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
-                0x0000000010007798                tu_fifo_write_n
+                0x0000000010007948       0xfc CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
+                0x0000000010007948                tu_fifo_write_n
  .text.tu_fifo_clear
-                0x0000000010007894       0x4c CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
-                0x0000000010007894                tu_fifo_clear
+                0x0000000010007a44       0x4c CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
+                0x0000000010007a44                tu_fifo_clear
  .text.tu_fifo_set_overwritable
-                0x00000000100078e0       0x3c CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
-                0x00000000100078e0                tu_fifo_set_overwritable
+                0x0000000010007a90       0x3c CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/lib/tinyusb/src/common/tusb_fifo.c.obj
+                0x0000000010007a90                tu_fifo_set_overwritable
  .text.startup._retrieve_unique_id_on_boot
-                0x000000001000791c       0x10 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj
+                0x0000000010007acc       0x10 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj
  .text.pico_get_unique_board_id_string
-                0x000000001000792c      0x1cc CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj
-                0x000000001000792c                pico_get_unique_board_id_string
+                0x0000000010007adc      0x1cc CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj
+                0x0000000010007adc                pico_get_unique_board_id_string
  .text.flash_get_unique_id
-                0x0000000010007af8       0x3c CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj
-                0x0000000010007af8                flash_get_unique_id
+                0x0000000010007ca8       0x3c CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj
+                0x0000000010007ca8                flash_get_unique_id
  .text.adc_init
-                0x0000000010007b34       0x38 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/hardware_adc/adc.c.obj
-                0x0000000010007b34                adc_init
- .text          0x0000000010007b6c       0x68 /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(lib_a-strlen-stub.o)
-                0x0000000010007b6c                strlen
+                0x0000000010007ce4       0x38 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/hardware_adc/adc.c.obj
+                0x0000000010007ce4                adc_init
+ .text.i2c_init
+                0x0000000010007d1c      0x108 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj
+                0x0000000010007d1c                i2c_init
+ .text.i2c_write_blocking
+                0x0000000010007e24       0xd4 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj
+                0x0000000010007e24                i2c_write_blocking
+ .text.i2c_read_blocking
+                0x0000000010007ef8       0x9c CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj
+                0x0000000010007ef8                i2c_read_blocking
+ .text          0x0000000010007f94       0x68 /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(lib_a-strlen-stub.o)
+                0x0000000010007f94                strlen
  *(.fini)
- .fini          0x0000000010007bd4        0x4 /usr/lib/gcc/arm-none-eabi/8.3.1/thumb/v6-m/nofp/crti.o
-                0x0000000010007bd4                _fini
- .fini.__stub   0x0000000010007bd8       0x70 linker stubs
+ .fini          0x0000000010007ffc        0x4 /usr/lib/gcc/arm-none-eabi/8.3.1/thumb/v6-m/nofp/crti.o
+                0x0000000010007ffc                _fini
+ .fini.__stub   0x0000000010008000       0x70 linker stubs
  *crtbegin.o(.ctors)
  *crtbegin?.o(.ctors)
  *(EXCLUDE_FILE(*crtend.o *crtend?.o) .ctors)
@@ -2087,133 +2126,137 @@ LOAD /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp
  *(SORT_BY_NAME(.dtors.*))
  *(.dtors)
  *(.eh_frame*)
- .eh_frame      0x0000000010007c48        0x0 /usr/lib/gcc/arm-none-eabi/8.3.1/thumb/v6-m/nofp/crtbegin.o
-                0x0000000010007c48                . = ALIGN (0x4)
+ .eh_frame      0x0000000010008070        0x0 /usr/lib/gcc/arm-none-eabi/8.3.1/thumb/v6-m/nofp/crtbegin.o
+                0x0000000010008070                . = ALIGN (0x4)
 
-.glue_7         0x0000000010007c48        0x0
- .glue_7        0x0000000010007c48        0x0 linker stubs
+.glue_7         0x0000000010008070        0x0
+ .glue_7        0x0000000010008070        0x0 linker stubs
 
-.glue_7t        0x0000000010007c48        0x0
- .glue_7t       0x0000000010007c48        0x0 linker stubs
+.glue_7t        0x0000000010008070        0x0
+ .glue_7t       0x0000000010008070        0x0 linker stubs
 
-.vfp11_veneer   0x0000000010007c48        0x0
- .vfp11_veneer  0x0000000010007c48        0x0 linker stubs
+.vfp11_veneer   0x0000000010008070        0x0
+ .vfp11_veneer  0x0000000010008070        0x0 linker stubs
 
-.v4_bx          0x0000000010007c48        0x0
- .v4_bx         0x0000000010007c48        0x0 linker stubs
+.v4_bx          0x0000000010008070        0x0
+ .v4_bx         0x0000000010008070        0x0 linker stubs
 
-.iplt           0x0000000010007c48        0x0
- .iplt          0x0000000010007c48        0x0 /usr/lib/gcc/arm-none-eabi/8.3.1/thumb/v6-m/nofp/crtbegin.o
+.iplt           0x0000000010008070        0x0
+ .iplt          0x0000000010008070        0x0 /usr/lib/gcc/arm-none-eabi/8.3.1/thumb/v6-m/nofp/crtbegin.o
 
-.rodata         0x0000000010007c48      0x56c
+.rodata         0x0000000010008070      0x5bc
  *(EXCLUDE_FILE(*libm.a: *libc.a:*lib_a-mem*.o *libgcc.a:) .rodata*)
  .rodata.motor_output_on
-                0x0000000010007c48       0x18 CMakeFiles/v3fkontroller.dir/main.c.obj
+                0x0000000010008070       0x18 CMakeFiles/v3fkontroller.dir/main.c.obj
+ .rodata.__bi_328.7149
+                0x0000000010008088        0x8 CMakeFiles/v3fkontroller.dir/main.c.obj
  .rodata.main.str1.4
-                0x0000000010007c60       0x34 CMakeFiles/v3fkontroller.dir/main.c.obj
+                0x0000000010008090       0x80 CMakeFiles/v3fkontroller.dir/main.c.obj
  .rodata.spin_lock_claim_unused.str1.4
-                0x0000000010007c94       0x1b CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
- *fill*         0x0000000010007caf        0x1 
+                0x0000000010008110       0x1b CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
+ *fill*         0x000000001000812b        0x1 
  .rodata.user_irq_claim_unused.str1.4
-                0x0000000010007cb0       0x1b CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
- *fill*         0x0000000010007ccb        0x1 
+                0x000000001000812c       0x1b CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+ *fill*         0x0000000010008147        0x1 
  .rodata.hardware_alarm_claim.str1.4
-                0x0000000010007ccc       0x22 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
- *fill*         0x0000000010007cee        0x2 
+                0x0000000010008148       0x22 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+ *fill*         0x000000001000816a        0x2 
  .rodata.hard_assertion_failure.str1.4
-                0x0000000010007cf0        0xc CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+                0x000000001000816c        0xc CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
  .rodata.panic.str1.4
-                0x0000000010007cfc       0x12 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
- *fill*         0x0000000010007d0e        0x2 
+                0x0000000010008178       0x10 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+                                         0x12 (size before relaxing)
  .rodata._vsnprintf
-                0x0000000010007d10      0x1e0 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+                0x0000000010008188      0x1e0 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
  .rodata._ftoa.str1.4
-                0x0000000010007ef0       0x15 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
- *fill*         0x0000000010007f05        0x3 
+                0x0000000010008368       0x15 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+ *fill*         0x000000001000837d        0x3 
  .rodata.pow10.5494
-                0x0000000010007f08       0x50 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+                0x0000000010008380       0x50 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
  .rodata.__bi_44
-                0x0000000010007f58        0xc CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x00000000100083d0        0xc CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .rodata.__bi_75
-                0x0000000010007f64        0xc CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x00000000100083dc        0xc CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .rodata.__bi_81
-                0x0000000010007f70        0xc CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x00000000100083e8        0xc CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .rodata.str1.4
-                0x0000000010007f7c       0x44 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x00000000100083f4       0x44 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .rodata.crlf_str.5963
-                0x0000000010007fc0        0x2 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
- *fill*         0x0000000010007fc2        0x2 
+                0x0000000010008438        0x2 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+ *fill*         0x000000001000843a        0x2 
  .rodata._resetd_driver
-                0x0000000010007fc4       0x18 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
+                0x000000001000843c       0x18 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
  .rodata.__bi_118.7257
-                0x0000000010007fdc        0xc CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
+                0x0000000010008454        0xc CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
  .rodata.str1.4
-                0x0000000010007fe8       0x13 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
- *fill*         0x0000000010007ffb        0x1 
+                0x0000000010008460       0x13 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
+ *fill*         0x0000000010008473        0x1 
  .rodata.str1.4
-                0x0000000010007ffc       0x2a CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
- *fill*         0x0000000010008026        0x2 
+                0x0000000010008474       0x2a CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
+ *fill*         0x000000001000849e        0x2 
  .rodata.usbd_desc_cfg
-                0x0000000010008028       0x54 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
+                0x00000000100084a0       0x54 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
  .rodata.usbd_desc_device
-                0x000000001000807c       0x12 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
- *fill*         0x000000001000808e        0x2 
+                0x00000000100084f4       0x12 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
+ *fill*         0x0000000010008506        0x2 
  .rodata.usbd_desc_str
-                0x0000000010008090       0x18 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
+                0x0000000010008508       0x18 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
  .rodata.dcd_rp2040_irq.str1.4
-                0x00000000100080a8       0x14 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
+                0x0000000010008520       0x14 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
  .rodata._hw_endpoint_buffer_control_update32.part.2.str1.4
-                0x00000000100080bc       0x1f CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj
- *fill*         0x00000000100080db        0x1 
+                0x0000000010008534       0x1f CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj
+ *fill*         0x0000000010008553        0x1 
  .rodata.hw_endpoint_xfer_continue.str1.4
-                0x00000000100080dc       0x29 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj
- *fill*         0x0000000010008105        0x3 
+                0x0000000010008554       0x29 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj
+ *fill*         0x000000001000857d        0x3 
  .rodata.str1.4
-                0x0000000010008108        0x7 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj
- *fill*         0x000000001000810f        0x1 
+                0x0000000010008580        0x7 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/rp2040_usb.c.obj
+ *fill*         0x0000000010008587        0x1 
  .rodata.tud_task
-                0x0000000010008110       0x8c CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+                0x0000000010008588       0x8c CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
  .rodata._usbd_driver
-                0x000000001000819c       0x18 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
-                0x00000000100081b4                . = ALIGN (0x4)
+                0x0000000010008614       0x18 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+                0x000000001000862c                . = ALIGN (0x4)
  *(SORT_BY_ALIGNMENT(SORT_BY_NAME(.flashdata*)))
-                0x00000000100081b4                . = ALIGN (0x4)
+                0x000000001000862c                . = ALIGN (0x4)
 
-.rel.dyn        0x00000000100081b4        0x0
- .rel.iplt      0x00000000100081b4        0x0 /usr/lib/gcc/arm-none-eabi/8.3.1/thumb/v6-m/nofp/crtbegin.o
+.rel.dyn        0x000000001000862c        0x0
+ .rel.iplt      0x000000001000862c        0x0 /usr/lib/gcc/arm-none-eabi/8.3.1/thumb/v6-m/nofp/crtbegin.o
 
 .ARM.extab
  *(.ARM.extab* .gnu.linkonce.armextab.*)
-                0x00000000100081b4                __exidx_start = .
+                0x000000001000862c                __exidx_start = .
 
 .ARM.exidx
  *(.ARM.exidx* .gnu.linkonce.armexidx.*)
-                0x00000000100081b4                __exidx_end = .
-                0x00000000100081b4                . = ALIGN (0x4)
-                0x00000000100081b4                __binary_info_start = .
+                0x000000001000862c                __exidx_end = .
+                0x000000001000862c                . = ALIGN (0x4)
+                0x000000001000862c                __binary_info_start = .
 
-.binary_info    0x00000000100081b4       0x20
+.binary_info    0x000000001000862c       0x24
  *(.binary_info.keep.*)
+ .binary_info.keep.__bi_ptr328
+                0x000000001000862c        0x4 CMakeFiles/v3fkontroller.dir/main.c.obj
  .binary_info.keep.__bi_ptr22
-                0x00000000100081b4        0x4 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x0000000010008630        0x4 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .binary_info.keep.__bi_ptr30
-                0x00000000100081b8        0x4 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x0000000010008634        0x4 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .binary_info.keep.__bi_ptr38
-                0x00000000100081bc        0x4 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x0000000010008638        0x4 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .binary_info.keep.__bi_ptr44
-                0x00000000100081c0        0x4 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x000000001000863c        0x4 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .binary_info.keep.__bi_ptr50
-                0x00000000100081c4        0x4 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x0000000010008640        0x4 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .binary_info.keep.__bi_ptr75
-                0x00000000100081c8        0x4 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x0000000010008644        0x4 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  .binary_info.keep.__bi_ptr81
-                0x00000000100081cc        0x4 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x0000000010008648        0x4 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
  *(.binary_info.*)
  .binary_info.__bi_ptr118
-                0x00000000100081d0        0x4 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
-                0x00000000100081d4                __binary_info_end = .
-                0x00000000100081d4                . = ALIGN (0x4)
-                0x00000000100081d4                __etext = .
+                0x000000001000864c        0x4 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
+                0x0000000010008650                __binary_info_end = .
+                0x0000000010008650                . = ALIGN (0x4)
+                0x0000000010008650                __etext = .
 
 .ram_vector_table
                 0x0000000020000000       0xc0
@@ -2222,7 +2265,7 @@ LOAD /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp
                 0x0000000020000000       0xc0 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
                 0x0000000020000000                ram_vector_table
 
-.data           0x00000000200000c0      0x3b0 load address 0x00000000100081d4
+.data           0x00000000200000c0      0x3b8 load address 0x0000000010008650
                 0x00000000200000c0                __data_start__ = .
  *(vtable)
  *(.time_critical*)
@@ -2291,191 +2334,194 @@ LOAD /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp
  .data._usbd_qdef
                 0x000000002000042c       0x24 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
                 0x000000002000042c                _usbd_qdef
-                0x0000000020000450                . = ALIGN (0x4)
+ .data.i2c0_inst
+                0x0000000020000450        0x8 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj
+                0x0000000020000450                i2c0_inst
+                0x0000000020000458                . = ALIGN (0x4)
  *(.after_data.*)
-                0x0000000020000450                . = ALIGN (0x4)
-                0x0000000020000450                PROVIDE (__mutex_array_start = .)
+                0x0000000020000458                . = ALIGN (0x4)
+                0x0000000020000458                PROVIDE (__mutex_array_start = .)
  *(SORT_BY_NAME(.mutex_array.*))
  *(.mutex_array)
- .mutex_array   0x0000000020000450        0x8 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
-                0x0000000020000458                PROVIDE (__mutex_array_end = .)
-                0x0000000020000458                . = ALIGN (0x4)
-                0x0000000020000458                PROVIDE (__preinit_array_start = .)
+ .mutex_array   0x0000000020000458        0x8 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+                0x0000000020000460                PROVIDE (__mutex_array_end = .)
+                0x0000000020000460                . = ALIGN (0x4)
+                0x0000000020000460                PROVIDE (__preinit_array_start = .)
  *(SORT_BY_NAME(.preinit_array.*))
  .preinit_array.00001
-                0x0000000020000458        0x4 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
+                0x0000000020000460        0x4 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
  .preinit_array.00010
-                0x000000002000045c        0x4 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
+                0x0000000020000464        0x4 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
  .preinit_array.00020
-                0x0000000020000460        0x4 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
+                0x0000000020000468        0x4 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
  .preinit_array.00020
-                0x0000000020000464        0x4 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj
+                0x000000002000046c        0x4 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj
  *(.preinit_array)
-                0x0000000020000468                PROVIDE (__preinit_array_end = .)
-                0x0000000020000468                . = ALIGN (0x4)
-                0x0000000020000468                PROVIDE (__init_array_start = .)
+                0x0000000020000470                PROVIDE (__preinit_array_end = .)
+                0x0000000020000470                . = ALIGN (0x4)
+                0x0000000020000470                PROVIDE (__init_array_start = .)
  *(SORT_BY_NAME(.init_array.*))
  *(.init_array)
- .init_array    0x0000000020000468        0x4 /usr/lib/gcc/arm-none-eabi/8.3.1/thumb/v6-m/nofp/crtbegin.o
- .init_array    0x000000002000046c        0x4 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj
-                0x0000000020000470                PROVIDE (__init_array_end = .)
-                0x0000000020000470                . = ALIGN (0x4)
-                0x0000000020000470                PROVIDE (__fini_array_start = .)
+ .init_array    0x0000000020000470        0x4 /usr/lib/gcc/arm-none-eabi/8.3.1/thumb/v6-m/nofp/crtbegin.o
+ .init_array    0x0000000020000474        0x4 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj
+                0x0000000020000478                PROVIDE (__init_array_end = .)
+                0x0000000020000478                . = ALIGN (0x4)
+                0x0000000020000478                PROVIDE (__fini_array_start = .)
  *(SORT_BY_NAME(.fini_array.*))
  *(.fini_array)
-                0x0000000020000470                PROVIDE (__fini_array_end = .)
+                0x0000000020000478                PROVIDE (__fini_array_end = .)
  *(.jcr)
-                0x0000000020000470                . = ALIGN (0x4)
-                0x0000000020000470                __data_end__ = .
+                0x0000000020000478                . = ALIGN (0x4)
+                0x0000000020000478                __data_end__ = .
 
 .tm_clone_table
-                0x0000000020000470        0x0 load address 0x0000000010008584
+                0x0000000020000478        0x0 load address 0x0000000010008a08
  .tm_clone_table
-                0x0000000020000470        0x0 /usr/lib/gcc/arm-none-eabi/8.3.1/thumb/v6-m/nofp/crtbegin.o
+                0x0000000020000478        0x0 /usr/lib/gcc/arm-none-eabi/8.3.1/thumb/v6-m/nofp/crtbegin.o
  .tm_clone_table
-                0x0000000020000470        0x0 /usr/lib/gcc/arm-none-eabi/8.3.1/thumb/v6-m/nofp/crtend.o
+                0x0000000020000478        0x0 /usr/lib/gcc/arm-none-eabi/8.3.1/thumb/v6-m/nofp/crtend.o
 
-.igot.plt       0x0000000020000470        0x0 load address 0x0000000010008584
- .igot.plt      0x0000000020000470        0x0 /usr/lib/gcc/arm-none-eabi/8.3.1/thumb/v6-m/nofp/crtbegin.o
+.igot.plt       0x0000000020000478        0x0 load address 0x0000000010008a08
+ .igot.plt      0x0000000020000478        0x0 /usr/lib/gcc/arm-none-eabi/8.3.1/thumb/v6-m/nofp/crtbegin.o
 
 .uninitialized_data
-                0x0000000020000470        0x0 load address 0x0000000010008584
-                0x0000000020000470                . = ALIGN (0x4)
+                0x0000000020000478        0x0 load address 0x0000000010008a08
+                0x0000000020000478                . = ALIGN (0x4)
  *(.uninitialized_data*)
 
-.scratch_x      0x0000000020040000        0x0 load address 0x0000000010008584
+.scratch_x      0x0000000020040000        0x0 load address 0x0000000010008a08
                 0x0000000020040000                __scratch_x_start__ = .
  *(.scratch_x.*)
                 0x0000000020040000                . = ALIGN (0x4)
                 0x0000000020040000                __scratch_x_end__ = .
-                0x0000000010008584                __scratch_x_source__ = LOADADDR (.scratch_x)
+                0x0000000010008a08                __scratch_x_source__ = LOADADDR (.scratch_x)
 
-.scratch_y      0x0000000020041000        0x0 load address 0x0000000010008584
+.scratch_y      0x0000000020041000        0x0 load address 0x0000000010008a08
                 0x0000000020041000                __scratch_y_start__ = .
  *(.scratch_y.*)
                 0x0000000020041000                . = ALIGN (0x4)
                 0x0000000020041000                __scratch_y_end__ = .
-                0x0000000010008584                __scratch_y_source__ = LOADADDR (.scratch_y)
+                0x0000000010008a08                __scratch_y_source__ = LOADADDR (.scratch_y)
 
-.bss            0x0000000020000470      0xdb8
-                0x0000000020000470                . = ALIGN (0x4)
-                0x0000000020000470                __bss_start__ = .
+.bss            0x0000000020000478      0xdb8
+                0x0000000020000478                . = ALIGN (0x4)
+                0x0000000020000478                __bss_start__ = .
  *(SORT_BY_ALIGNMENT(SORT_BY_NAME(.bss*)))
  .bss.default_alarm_pool_entries
-                0x0000000020000470      0x100 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/common/pico_time/time.c.obj
+                0x0000000020000478      0x100 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/common/pico_time/time.c.obj
  .bss.last_avail_time.7236
-                0x0000000020000570        0x8 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
+                0x0000000020000578        0x8 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
  .bss.last_step_time
-                0x0000000020000578        0x8 CMakeFiles/v3fkontroller.dir/main.c.obj
-                0x0000000020000578                last_step_time
- .bss.motor_duty_cycle
                 0x0000000020000580        0x8 CMakeFiles/v3fkontroller.dir/main.c.obj
-                0x0000000020000580                motor_duty_cycle
- .bss.rotor_average_speed
+                0x0000000020000580                last_step_time
+ .bss.motor_duty_cycle
                 0x0000000020000588        0x8 CMakeFiles/v3fkontroller.dir/main.c.obj
-                0x0000000020000588                rotor_average_speed
- .bss.rotor_phase_frequency
+                0x0000000020000588                motor_duty_cycle
+ .bss.rotor_average_speed
                 0x0000000020000590        0x8 CMakeFiles/v3fkontroller.dir/main.c.obj
-                0x0000000020000590                rotor_phase_frequency
- .bss.steps_since_last_report
+                0x0000000020000590                rotor_average_speed
+ .bss.rotor_phase_frequency
                 0x0000000020000598        0x8 CMakeFiles/v3fkontroller.dir/main.c.obj
-                0x0000000020000598                steps_since_last_report
- .bss.time_since_last_step
+                0x0000000020000598                rotor_phase_frequency
+ .bss.steps_since_last_report
                 0x00000000200005a0        0x8 CMakeFiles/v3fkontroller.dir/main.c.obj
-                0x00000000200005a0                time_since_last_step
- .bss           0x00000000200005a8       0x1c /usr/lib/gcc/arm-none-eabi/8.3.1/thumb/v6-m/nofp/crtbegin.o
+                0x00000000200005a0                steps_since_last_report
+ .bss.time_since_last_step
+                0x00000000200005a8        0x8 CMakeFiles/v3fkontroller.dir/main.c.obj
+                0x00000000200005a8                time_since_last_step
+ .bss           0x00000000200005b0       0x1c /usr/lib/gcc/arm-none-eabi/8.3.1/thumb/v6-m/nofp/crtbegin.o
  .bss._app_driver
-                0x00000000200005c4        0x4 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+                0x00000000200005cc        0x4 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
  .bss._cdcd_itf
-                0x00000000200005c8      0x2d8 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
+                0x00000000200005d0      0x2d8 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.c.obj
  .bss._ctrl_xfer
-                0x00000000200008a0       0x14 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj
+                0x00000000200008a8       0x14 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj
  .bss._ubsd_mutexdef
-                0x00000000200008b4        0x8 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+                0x00000000200008bc        0x8 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
  .bss._usbd_ctrl_buf
-                0x00000000200008bc       0x40 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj
+                0x00000000200008c4       0x40 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/lib/tinyusb/src/device/usbd_control.c.obj
  .bss._usbd_dev
-                0x00000000200008fc       0x53 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
- *fill*         0x000000002000094f        0x1 
+                0x0000000020000904       0x53 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+ *fill*         0x0000000020000957        0x1 
  .bss._usbd_mutex
-                0x0000000020000950        0x4 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
- .bss._usbd_q   0x0000000020000954        0x4 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+                0x0000000020000958        0x4 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+ .bss._usbd_q   0x000000002000095c        0x4 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
  .bss.alarm_callbacks
-                0x0000000020000958       0x10 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+                0x0000000020000960       0x10 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
  .bss.boot2_copyout
-                0x0000000020000968      0x100 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj
- .bss.claimed   0x0000000020000a68        0x4 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
+                0x0000000020000970      0x100 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj
+ .bss.claimed   0x0000000020000a70        0x4 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
  .bss.configured_freq
-                0x0000000020000a6c       0x28 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
+                0x0000000020000a74       0x28 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
  .bss.default_alarm_pool_entry_ids_high
-                0x0000000020000a94       0x10 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/common/pico_time/time.c.obj
+                0x0000000020000a9c       0x10 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/common/pico_time/time.c.obj
  .bss.default_alarm_pool_heap_nodes
-                0x0000000020000aa4       0x30 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/common/pico_time/time.c.obj
+                0x0000000020000aac       0x30 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/common/pico_time/time.c.obj
  .bss.desc_str.7121
-                0x0000000020000ad4       0x28 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
- .bss.drivers   0x0000000020000afc        0x4 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
- .bss.filter    0x0000000020000b00        0x4 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+                0x0000000020000adc       0x28 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
+ .bss.drivers   0x0000000020000b04        0x4 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+ .bss.filter    0x0000000020000b08        0x4 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
  .bss.hw_endpoints
-                0x0000000020000b04      0x400 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
+                0x0000000020000b0c      0x400 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
  .bss.lazy_vsnprintf
-                0x0000000020000f04        0x4 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+                0x0000000020000f0c        0x4 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
  .bss.load_value
-                0x0000000020000f08        0x4 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj
+                0x0000000020000f10        0x4 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj
  .bss.next_buffer_ptr
-                0x0000000020000f0c        0x4 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
- .bss.pools     0x0000000020000f10       0x10 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/common/pico_time/time.c.obj
+                0x0000000020000f14        0x4 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/lib/tinyusb/src/portable/raspberrypi/rp2040/dcd_rp2040.c.obj
+ .bss.pools     0x0000000020000f18       0x10 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/common/pico_time/time.c.obj
  .bss.retrieved_id
-                0x0000000020000f20        0x8 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj
+                0x0000000020000f28        0x8 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj
  .bss.sf_clz_func
-                0x0000000020000f28        0x4 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
-                0x0000000020000f28                sf_clz_func
+                0x0000000020000f30        0x4 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
+                0x0000000020000f30                sf_clz_func
  .bss.sleep_notifier
-                0x0000000020000f2c        0x4 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/common/pico_time/time.c.obj
+                0x0000000020000f34        0x4 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/common/pico_time/time.c.obj
  .bss.stdio_usb_mutex
-                0x0000000020000f30        0x8 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
+                0x0000000020000f38        0x8 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
  .bss.target_hi
-                0x0000000020000f38       0x10 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+                0x0000000020000f40       0x10 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
  .bss.usbd_serial_str
-                0x0000000020000f48       0x11 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
- *fill*         0x0000000020000f59        0x3 
+                0x0000000020000f50       0x11 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb_descriptors.c.obj
+ *fill*         0x0000000020000f61        0x3 
  .bss.user_irq_claimed
-                0x0000000020000f5c        0x2 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x0000000020000f64        0x2 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
  .bss._app_driver_count
-                0x0000000020000f5e        0x1 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+                0x0000000020000f66        0x1 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
  .bss._usbd_initialized
-                0x0000000020000f5f        0x1 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+                0x0000000020000f67        0x1 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
  .bss.boot2_copyout_valid
-                0x0000000020000f60        0x1 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj
- .bss.claimed   0x0000000020000f61        0x1 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+                0x0000000020000f68        0x1 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj
+ .bss.claimed   0x0000000020000f69        0x1 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
  .bss.irq_hander_chain_free_slot_head
-                0x0000000020000f62        0x1 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
- .bss.itf_num   0x0000000020000f63        0x1 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
+                0x0000000020000f6a        0x1 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+ .bss.itf_num   0x0000000020000f6b        0x1 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_stdio_usb/reset_interface.c.obj
  .bss.low_priority_irq_num
-                0x0000000020000f64        0x1 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
+                0x0000000020000f6c        0x1 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c.obj
  .bss.rotor_current_step
-                0x0000000020000f65        0x1 CMakeFiles/v3fkontroller.dir/main.c.obj
-                0x0000000020000f65                rotor_current_step
+                0x0000000020000f6d        0x1 CMakeFiles/v3fkontroller.dir/main.c.obj
+                0x0000000020000f6d                rotor_current_step
  .bss.rotor_last_step
-                0x0000000020000f66        0x1 CMakeFiles/v3fkontroller.dir/main.c.obj
-                0x0000000020000f66                rotor_last_step
+                0x0000000020000f6e        0x1 CMakeFiles/v3fkontroller.dir/main.c.obj
+                0x0000000020000f6e                rotor_last_step
  .bss.timer_callbacks_pending
-                0x0000000020000f67        0x1 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+                0x0000000020000f6f        0x1 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
  *(COMMON)
- COMMON         0x0000000020000f68      0x100 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
-                0x0000000020000f68                sd_table
- COMMON         0x0000000020001068      0x100 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj
-                0x0000000020001068                sf_table
- COMMON         0x0000000020001168       0xc0 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
-                0x0000000020001168                _usbd_qdef_buf
-                0x0000000020001228                . = ALIGN (0x4)
-                0x0000000020001228                __bss_end__ = .
+ COMMON         0x0000000020000f70      0x100 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
+                0x0000000020000f70                sd_table
+ COMMON         0x0000000020001070      0x100 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj
+                0x0000000020001070                sf_table
+ COMMON         0x0000000020001170       0xc0 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/lib/tinyusb/src/device/usbd.c.obj
+                0x0000000020001170                _usbd_qdef_buf
+                0x0000000020001230                . = ALIGN (0x4)
+                0x0000000020001230                __bss_end__ = .
 
-.heap           0x0000000020001228      0x800
-                0x0000000020001228                __end__ = .
-                0x0000000020001228                end = __end__
+.heap           0x0000000020001230      0x800
+                0x0000000020001230                __end__ = .
+                0x0000000020001230                end = __end__
  *(.heap*)
- .heap          0x0000000020001228      0x800 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_standard_link/crt0.S.obj
-                0x0000000020001a28                __HeapLimit = .
+ .heap          0x0000000020001230      0x800 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_standard_link/crt0.S.obj
+                0x0000000020001a30                __HeapLimit = .
 
 .stack1_dummy   0x0000000020040000        0x0
  *(.stack1*)
@@ -2484,8 +2530,8 @@ LOAD /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp
  *(.stack*)
  .stack         0x0000000020041000      0x800 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_standard_link/crt0.S.obj
 
-.flash_end      0x0000000010008584        0x0
-                0x0000000010008584                __flash_binary_end = .
+.flash_end      0x0000000010008a08        0x0
+                0x0000000010008a08                __flash_binary_end = .
                 0x0000000020040000                __StackLimit = (ORIGIN (RAM) + LENGTH (RAM))
                 0x0000000020041000                __StackOneTop = (ORIGIN (SCRATCH_X) + LENGTH (SCRATCH_X))
                 0x0000000020042000                __StackTop = (ORIGIN (SCRATCH_Y) + LENGTH (SCRATCH_Y))
@@ -2564,7 +2610,8 @@ LOAD CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pic
 LOAD CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj
 LOAD CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj
 LOAD CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/hardware_adc/adc.c.obj
-LOAD /tmp/cciqJVQt.o
+LOAD CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj
+LOAD /tmp/ccBb5Tib.o
 LOAD /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libstdc++.a
 LOAD /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libm.a
 START GROUP
@@ -2680,13 +2727,15 @@ LOAD linker stubs
  .ARM.attributes
                 0x00000000000007a8       0x2c CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/hardware_adc/adc.c.obj
  .ARM.attributes
-                0x00000000000007d4       0x22 /tmp/cciqJVQt.o
+                0x00000000000007d4       0x2c CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj
  .ARM.attributes
-                0x00000000000007f6       0x1e /usr/lib/gcc/arm-none-eabi/8.3.1/thumb/v6-m/nofp/libgcc.a(_dvmd_tls.o)
+                0x0000000000000800       0x22 /tmp/ccBb5Tib.o
  .ARM.attributes
-                0x0000000000000814       0x2c /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(lib_a-strlen-stub.o)
+                0x0000000000000822       0x1e /usr/lib/gcc/arm-none-eabi/8.3.1/thumb/v6-m/nofp/libgcc.a(_dvmd_tls.o)
  .ARM.attributes
-                0x0000000000000840       0x2c /usr/lib/gcc/arm-none-eabi/8.3.1/thumb/v6-m/nofp/crtend.o
+                0x0000000000000840       0x2c /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(lib_a-strlen-stub.o)
+ .ARM.attributes
+                0x000000000000086c       0x2c /usr/lib/gcc/arm-none-eabi/8.3.1/thumb/v6-m/nofp/crtend.o
 
 .comment        0x0000000000000000       0x9f
  .comment       0x0000000000000000       0x51 /usr/lib/gcc/arm-none-eabi/8.3.1/thumb/v6-m/nofp/crtbegin.o
@@ -2727,6 +2776,7 @@ LOAD linker stubs
  .comment       0x0000000000000051       0x52 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj
  .comment       0x0000000000000051       0x52 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj
  .comment       0x0000000000000051       0x52 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/hardware_adc/adc.c.obj
+ .comment       0x0000000000000051       0x52 CMakeFiles/v3fkontroller.dir/home/alex/software/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.obj
  .comment       0x0000000000000051       0x4e /usr/lib/gcc/arm-none-eabi/8.3.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(lib_a-strlen-stub.o)
                                          0x4f (size before relaxing)
  .comment       0x000000000000009f       0x52 /usr/lib/gcc/arm-none-eabi/8.3.1/thumb/v6-m/nofp/crtend.o
