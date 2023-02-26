@@ -30,9 +30,9 @@ const uint MOTOR_LO_U = 3;
 const uint MOTOR_LO_V = 4;
 const uint MOTOR_LO_W = 5;
 
-const uint MOTOR_SENSE_U = 26;
-const uint MOTOR_SENSE_V = 27;
-const uint MOTOR_SENSE_W = 28;
+const uint MOTOR_SENSE_U = 16;
+const uint MOTOR_SENSE_V = 17;
+const uint MOTOR_SENSE_W = 18;
 
 // By default these devices  are on bus address 0x68
 static int addr = 0x68;
@@ -345,6 +345,13 @@ int main() {
         }
         
         steps_since_last_report++;
+        
+        if (steps_since_last_report > 50) {
+            gpio_put(LED_B_PIN, 1);
+        } else {
+            gpio_put(LED_B_PIN, 0);
+        }
+        
         if (steps_since_last_report > 100) {
             //check_rotor_position();
             //estimate_rotor_position();
